@@ -1,0 +1,18 @@
+class Solution {
+    /**
+     * @param {number[]}
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+        let seen = new Set();
+        for (let i = 0; i < nums.length; i++) {
+            if (!seen.has(nums[i])) {
+                seen.add(nums[i]);
+            }else{
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
